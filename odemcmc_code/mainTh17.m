@@ -1,4 +1,4 @@
-function [] = run_inference_th17(n_iter, filename, M)
+function [] = mainTh17(n_iter, filename, M)
 
 % Main function for the th17 inference
 % author: Juho Timonen

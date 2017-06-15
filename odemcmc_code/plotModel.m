@@ -1,5 +1,5 @@
 function [] = plotModel(n, ttt, Data, Model, theta_y, theta_x, names)
-% Plot model and data
+% Plot model output and data
 % author: Juho Timonen
 % date: 9 Jun 2017
 

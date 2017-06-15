@@ -1,4 +1,5 @@
-function [mchain, SSIZE, OVL, WWW] = metropolisPrecomputed(Z0, MOD, ULPP, max_iter, tol)
+function [mchain, SSIZE, OVL, WWW] = ...
+    metropolisPrecomputed(Z0, MOD, ULPP, max_iter, tol)
 
 % Metropolis sampling with precomputed posterior probability values
 % author: Juho Timonen

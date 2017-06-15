@@ -1,4 +1,4 @@
-function [mchain, SSIZE, OVL, WWW] = run_inference_sim(exp_id, M)
+function [mchain, SSIZE, OVL, WWW] = mainSim(exp_id, M)
 
 % Run the inference for any of the three simulated experiments
 % with pre-computed ulpp values
@@ -47,7 +47,7 @@ max_iter = 10^5;                % max iterations for sampling
 tol = 0.99;                     % stopping condition for OVL
 
 % Run sampling
-[mchain, SSIZE, OVL, WWW] = metropolis_precomputed(Z0, MOD, ULPP, max_iter, tol);
+[mchain, SSIZE, OVL, WWW] = metropolisPrecomputed(Z0, MOD, ULPP, max_iter, tol);
 
 % Plot OVL trace
 plot(SSIZE, OVL); hold on;      ylim([0,1]);
