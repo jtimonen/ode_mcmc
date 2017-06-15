@@ -1,4 +1,4 @@
-function [MOD, PAR, ULPP] = compute_all_ulpp(fname, M)
+function [MOD, PAR, ULPP] = computeAllUlpp(fname, M)
 
 % Compute the unnormalized log-posterior probability (ulpp)
 % value for all models under hypothesis that there are M phases.
