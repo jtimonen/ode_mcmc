@@ -13,19 +13,27 @@ Implementation of probabilistic ODE model structure inference using MCMC methods
 
 ### Main functions
 
-computeAllUlpp.m - Compute the unnormalized log-posterior value for each allowed model
+* computeAllUlpp.m - Compute the unnormalized log-posterior value for each allowed model
 
-mainSim.m - Main function for running inference in simulated data cases where the ulpp values have been pre-computed using computeAllUlpp.m
+* mainSim.m - Main function for running inference in simulated data cases where the ulpp values have been pre-computed using computeAllUlpp.m
 
-createSimulatedDataAndOpt.m - Main function for creating simulated data and formulating the inference problem
+* createSimulatedDataAndOpt.m - Main function for creating simulated data and formulating the inference problem
 
-mainTh17.m - Main function for structure inference with real data
+* mainTh17.m - Main function for structure inference with real data
 
 
 ### Folders
 
-src - folder containing functions needed in the inference
+* src - folder containing functions needed in the inference
 
-data_and_options - folder containing example simulated and real datasets with options that define the inference problem
+* data_and_options - folder containing example simulated and real datasets with options that define the inference problem
 
-results - folder containing results for simulated and real data inference
+* results - folder containing results for simulated and real data inference
+
+
+## Requirements
+
+* Matlab [https://se.mathworks.com/products/matlab.html]
+* Sundials + sundialsTB [https://computation.llnl.gov/projects/sundials]
+
+Tested with Matlab 2016a, 2016b and sundials 2.4.0 
