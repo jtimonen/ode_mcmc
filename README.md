@@ -24,11 +24,11 @@ Implementation of probabilistic ODE model structure inference using MCMC methods
 
 ### Folders
 
-* src - folder containing functions needed in the inference
+* src - Functions needed in the inference
 
-* data_and_options - folder containing example simulated and real datasets with options that define the inference problem
+* data_and_options - Example simulated and real datasets with options that define the inference problem
 
-* results - folder containing results for simulated and real data inference
+* results - Results for simulated and real data inference
 
 
 ## Requirements
