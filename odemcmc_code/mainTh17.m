@@ -9,10 +9,6 @@ function [] = mainTh17(n_iter, filename, M)
 
 fprintf('File to save: %s \n', filename);
 
-% Start Sundials
-startup_STB(path_to_STB);
-addpath('src');
-
 % Load variables Data, Opt
 load('datasets/th17_data_opt.mat');
 

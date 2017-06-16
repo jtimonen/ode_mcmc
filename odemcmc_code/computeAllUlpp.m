@@ -13,10 +13,6 @@ function [MOD, PAR, ULPP] = computeAllUlpp(fname, M)
 % Load structs Data and Opt, print the optimization bounds
 load(['datasets/', fname]); Opt.Bounds
 
-% Start the sundials ODE solver
-startup_STB(path_to_STB);
-addpath('src');
-
 % Get N, number of possible mechanisms
 D = Opt.Dynamics;
 N = size(D.bas,2)+size(D.act,2)+size(D.synact,2)+size(D.inh,2)+size(D.deg,2);

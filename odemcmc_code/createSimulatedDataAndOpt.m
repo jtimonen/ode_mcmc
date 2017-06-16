@@ -6,11 +6,8 @@
 % Tested with Matlab 2016b and sundials-2.4.0
 
 % Set random seed
-rng(234125); addpath('src/'); 
-
-% Start Sundials
-startup_STB(path_to_STB);
-
+rng(234125); 
+ 
 % Noise parameters and gene names
 Opt.alpha = 0.0001; Opt.beta = 0.035;   Opt.names = {'A', 'B', 'C'};
 
