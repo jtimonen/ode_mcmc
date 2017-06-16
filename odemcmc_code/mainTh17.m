@@ -10,7 +10,7 @@ function [] = mainTh17(n_iter, filename, M)
 fprintf('File to save: %s \n', filename);
 
 % Load variables Data, Opt
-load('datasets/th17_data_opt.mat');
+load('data_and_options/th17_data_opt.mat');
 
 % Set random seed
 rng('shuffle')

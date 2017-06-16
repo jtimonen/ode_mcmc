@@ -6,10 +6,11 @@ function [] = setPath(path_to_STB)
 % Date: Jun 16 2017
 
 % The file startup_STB.m should be in the sundialsTB directory
-addpath(fullfile(path_to_STB), sundialsTB)
+fullpath = fullfile(path_to_STB, 'sundialsTB');
+addpath(fullpath)
 
 % Add the sundials toolbox functions to path
-startup_STB(path_to_STB);
+startup_STB(fullpath);
 
 % Add other functions to path
 addpath('src');
