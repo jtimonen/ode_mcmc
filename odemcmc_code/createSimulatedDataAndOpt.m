@@ -8,8 +8,7 @@
 % Set random seed
 rng(234125); addpath('src/'); 
 
-% Set the path to sundialsTB here
-path_to_STB = '~/csb/odemcmc/';
+% Start Sundials
 startup_STB(path_to_STB);
 
 % Noise parameters and gene names

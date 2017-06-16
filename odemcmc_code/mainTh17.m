@@ -9,8 +9,7 @@ function [] = mainTh17(n_iter, filename, M)
 
 fprintf('File to save: %s \n', filename);
 
-% Set the path to sundialsTB here
-path_to_STB = '~/csb/odemcmc';
+% Start Sundials
 startup_STB(path_to_STB);
 addpath('src');
 

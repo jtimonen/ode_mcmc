@@ -14,9 +14,6 @@ function [MOD, PAR, ULPP] = computeAllUlpp(fname, M)
 load(['datasets/', fname]); Opt.Bounds
 
 % Start the sundials ODE solver
-
-% Set the path to sundialsTB here
-path_to_STB = '~/csb/odemcmc';
 startup_STB(path_to_STB);
 addpath('src');
 
