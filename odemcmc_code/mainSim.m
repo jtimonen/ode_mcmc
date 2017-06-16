@@ -7,8 +7,8 @@ function [mchain, SSIZE, OVL, WWW] = mainSim(exp_id, M)
 
 % Input:
 % - exp_id = either 1, 2 or 3
-% -      M = hypothesis about number of latent states (not applicable when
-%          exp_id == 1)
+% -      M = hypothesis about number of latent states (has to be 1 when
+%            exp_id == 1)
 
 % Output:
 % -   mchain = obtained Markov chain
@@ -17,23 +17,14 @@ function [mchain, SSIZE, OVL, WWW] = mainSim(exp_id, M)
 %            at iteration i and the real model posterior
 % -   WWW(i) = inferred model structure matrix weights at iteration i
 
-% All possible uses:
-%   run_inference(1)
-%   run_inference(2, 1)
-%   run_inference(2, 2)
-%   run_inference(2, 3)
-%   run_inference(3, 1)
-%   run_inference(3, 2)
-%   run_inference(3, 3)
-
-addpath src/
+if((exp_id==1) && (M~=1))
+    error('Only M = 1 is possible for ID = 1!');
+end
 
 % Set random seed
 rng(841031)
 filename = ['results/simulated/exp', num2str(exp_id)];
-if(nargin > 1)
-    filename = [filename, '_', num2str(M)];
-end
+filename = [filename, '_', num2str(M)];
 
 % Set initial model
 if(exp_id == 1)

@@ -1,17 +1,22 @@
-function [MOD, PAR, ULPP] = computeAllUlpp(fname, M)
+function [MOD, PAR, ULPP] = computeAllUlpp(ID, M)
 
 % Compute the unnormalized log-posterior probability (ulpp)
-% value for all models under hypothesis that there are M phases.
-% FNAME should have the form 'ID_data_opt.mat' and contain Data and Opt structs
-
+% value for all models in experiment ID under hypothesis that there are M phases.
+% - ID should be either 1, 2 or 3 
+% - M should be either 1, 2 or 3 (only M = 1, when ID = 2 or 3)
 % author: Juho Timonen
-% date: Jun 12 2017
+% date: Jun 16 2017
+
+if((ID==1) && (M~=1))
+    error('Only M = 1 is possible for ID = 1!');
+end
 
 % Requires the Sundials Matlab Toolbox
 % Tested with Matlab 2016b and sundials-2.4.0
 
 % Load structs Data and Opt, print the optimization bounds
-load(['datasets/', fname]); Opt.Bounds
+fname = ['exp', num2str(ID), '_data_opt.mat'];
+load(['data_and_options/', fname]); Opt.Bounds
 
 % Get N, number of possible mechanisms
 D = Opt.Dynamics;
