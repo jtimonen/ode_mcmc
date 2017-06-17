@@ -30,6 +30,7 @@ Implementation of probabilistic ODE model structure inference using MCMC methods
 
 * results - Results for simulated and real data inference
 
+* result_processing - Some functions for processing the th17 results
 
 ## Requirements
 
