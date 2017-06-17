@@ -1,9 +1,0 @@
-
-OVL1 = getOvlTraces(1);
-OVL2 = getOvlTraces(2);
-[OVL31, OVL32] = getOvlTraces(3);
-
-plot(OVL1, 'k'); hold on;
-plot(OVL2, 'Color', 0.5*ones(3,1)); 
-plot(OVL31, 'k--'); 
-plot(OVL32, 'Color', 0.99*ones(3,1), 'LineStyle', ':');
