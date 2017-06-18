@@ -12,13 +12,11 @@ end
 % Download results to cell structures
 MODS = cell(n_chains,1);
 ULPPS = cell(n_chains,1);
-S = cell(n_chains, 1);
 for j = 1:n_chains
     resultfile = ['ciof', num2str(M),'_chain',num2str(j)];
     load(['../results/th17_5days/', resultfile]);
     MODS{j} = MOD;
     ULPPS{j} = ULPP;
-    S{j} = getStructureInference(MOD, ULPP); 
 end
 
 % OVL trace between chains 1 and 2
@@ -32,6 +30,8 @@ for i = 1:L
     OVL12(i) = sum(min(q1,q2));
 end
 
+S.w1
+
 if(M==3)
     % OVL trace between chains 3 and 4
     [~, ULPP, I3, I4] = modelSetUnion(MODS{3}, ULPPS{3}, MODS{4}, ULPPS{4});
@@ -44,17 +44,5 @@ if(M==3)
     end
 end
 
-
-end
-
-function W = getStructureInference(MOD, ulpp)
-
-post = exp(ulpp-max(ulpp));
-post = post/sum(post);
-[n,m,k] = size(MOD);
-W = zeros(n,m);
-for i = 1:k
-    W = W + post(i)*MOD(:, :, i);
-end
 
 end

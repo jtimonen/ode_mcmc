@@ -46,7 +46,7 @@ W1 = S2{1}; W2 = S2{2};
 for i = 1:2
     subplot(1,6,1+i);
     barh([W1(:, i), W2(:, i)], WID, 'EdgeColor', EC);
-    set(gca,'ygrid','on'); set(gca,'YTickLabel', []);
+    set(gca,'ygrid','on')
     xlabel('Link weight');  axis tight;
     box off;
 end
@@ -55,7 +55,7 @@ W1 = S3{1}; W2 = S3{2}; W3 = S3{3}; W4 = S3{4};
 for i = 1:3
     subplot(1,6,3+i);
     barh([W1(:, i), W2(:, i), W3(:, i), W4(:, i)], WID, 'EdgeColor', EC);
-    set(gca,'ygrid','on'); set(gca,'YTickLabel', []);
+    set(gca,'ygrid','on')
     xlabel('Link weight');  axis tight;
     box off;
 end
