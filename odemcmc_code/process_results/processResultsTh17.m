@@ -9,21 +9,22 @@ save('processed_th17', 'S1', 'S2', 'S3', ...
 %% Plotting
 load('processed_th17');
 labels = cell(15,1);
-labels{1} = 'BATF –> STAT3';
-labels{2} = 'A –> C';
-labels{3} = 'B –> A';
-labels{4} = 'B –> C';
-labels{5} = 'C –> A';
-labels{6} = 'C –> B';
-labels{7} = 'A –| B';
-labels{8} = 'A –| C';
-labels{9} = 'B –| A';
-labels{10} = 'B –| C';
-labels{11} = 'BATF + IRF4 –> STAT3';
-labels{12} = 'BATF + IRF4 –> STAT3';
-labels{13} = 'BATF + IRF4 –> STAT3';
-labels{14} = 'MAF –| BATF';
-labels{15} = 'RORC –| MAF';
+labels{1} = 'BATF  –> STAT3';
+labels{2} = 'STAT3 –> BATF';
+labels{3} = 'STAT3 –> IRF4';
+labels{4} = 'IRF4  –> STAT3';
+labels{5} = 'IRF4  –> RORC';
+labels{6} = 'IRF4  –> MAF';
+labels{7} = 'STAT3 –> RORC';
+labels{8} = 'BATF  –> RORC';
+labels{9} = 'STAT3 –> MAF';
+labels{10}= 'BATF  –> MAF';
+labels{11}= 'BATF  + IRF4  –> STAT3';
+labels{12}= 'BATF  + IRF4  –> RORC';
+labels{13}= 'BATF  + IRF4  –> MAF';
+labels{14}= 'MAF   –| BATF';
+labels{15}= 'RORC  –| MAF';
+labels = flipud(labels);
 
 COL = [186,228,179; ...
        116,196,118; ...
@@ -36,7 +37,8 @@ colormap(COL);
 % M = 1
 subplot(1,6,1); EC = 'none'; WID = 1;
 barh([S1{1}, S1{2}], WID, 'EdgeColor', EC);
-set(gca,'ygrid','on')
+set(gca,'ygrid','on');
+set(gca,'ticklength', [0.0001, 0.0001]);
 set(gca,'YTickLabel', labels);
 xlabel('Link weight');  axis tight;
 box off;
@@ -47,6 +49,7 @@ for i = 1:2
     subplot(1,6,1+i);
     barh([W1(:, i), W2(:, i)], WID, 'EdgeColor', EC);
     set(gca,'ygrid','on'); set(gca,'YTickLabel', []);
+    set(gca,'ticklength', [0.0001, 0.0001]);
     xlabel('Link weight');  axis tight;
     box off;
 end
@@ -56,6 +59,7 @@ for i = 1:3
     subplot(1,6,3+i);
     barh([W1(:, i), W2(:, i), W3(:, i), W4(:, i)], WID, 'EdgeColor', EC);
     set(gca,'ygrid','on'); set(gca,'YTickLabel', []);
+    set(gca,'ticklength', [0.0001, 0.0001]);
     xlabel('Link weight');  axis tight;
     box off;
 end
