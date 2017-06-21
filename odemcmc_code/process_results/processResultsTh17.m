@@ -24,7 +24,6 @@ labels{12}= 'BATF  + IRF4  –> RORC';
 labels{13}= 'BATF  + IRF4  –> MAF';
 labels{14}= 'MAF   –| BATF';
 labels{15}= 'RORC  –| MAF';
-labels = flipud(labels);
 
 COL = [186,228,179; ...
        116,196,118; ...
