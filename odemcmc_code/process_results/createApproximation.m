@@ -1,3 +1,5 @@
+% Author: Juho Timonen
+% Date: Jun 21 2017
 
 function q = createApproximation(ULPP, IND)
 

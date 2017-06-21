@@ -1,5 +1,10 @@
 function [S, OVL12, OVL34] = getOvlTraces(M)
 
+% Author: Juho Timonen
+% Date: Jun 21 2017
+% Get overlapping coefficient at different number of models in the
+% posterior approximation support
+
 % Check input
 if((M==1)||(M==2))
     n_chains = 2;

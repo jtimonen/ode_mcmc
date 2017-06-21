@@ -1,3 +1,7 @@
+% Author: Juho Timonen
+% Date: Jun 21 2017
+
+% Process and view th17 results
 
 %% Computationally more exhaustive part
 [S1, OVL1] = getOvlTraces(1);
