@@ -2,39 +2,28 @@
 
 Implementation of probabilistic ODE model structure inference using MCMC methods
 
-
 ## Authors
 
 * Juho Timonen (juho.timonen@aalto.fi)
 * Based on LEM modeling implementation by Jukka Intosalmi [http://research.ics.aalto.fi/csb/software/lem/]
 
-
-## Contents
-
 ### Main functions
 
-* computeAllUlpp.m - Compute the unnormalized log-posterior value for each allowed model
+* Main functions for running inference in simulated data cases where the model probabilities have been precomputed
+* - main_sim_1.m
+* - main_sim_23.m
 
-* mainSim.m - Main function for running inference in simulated data cases where the ulpp values have been pre-computed using computeAllUlpp.m
+* Main functions for creating simulated data and formulating an inference problem
+* - defineSimProblem_1.m
+* - defineSimProblem_2.m
+* - defineSimProblem_3.m
 
-* createSimulatedDataAndOpt.m - Main function for creating simulated data and formulating the inference problem
-
-* mainTh17.m - Main function for structure inference with real data
-
-
-### Folders
-
-* src - Functions needed in the inference
-
-* data_and_options - Example simulated and real datasets with options that define the inference problem
-
-* results - Results for simulated and real data inference
-
-* process_results - Some functions for processing the th17 results
+* Main function for structure inference with real data
+- main_Th17.m
 
 ## Requirements
 
 * Matlab [https://se.mathworks.com/products/matlab.html]
 * Sundials + sundialsTB [https://computation.llnl.gov/projects/sundials]
 
-Tested with Matlab 2016a, 2016b and sundials 2.4.0 
+Tested with Matlab 2016b and sundials 2.4.0 
