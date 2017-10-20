@@ -9,17 +9,17 @@ Implementation of probabilistic ODE model structure inference using MCMC methods
 
 ### Main functions
 
-* Main functions for running inference in simulated data cases where the model probabilities have been precomputed
-* - main_sim_1.m
-* - main_sim_23.m
+Main functions for running the inference in simulated data cases where the model probabilities have been precomputed
+* main_sim_1.m
+* main_sim_23.m
 
-* Main functions for creating simulated data and formulating an inference problem
-* - defineSimProblem_1.m
-* - defineSimProblem_2.m
-* - defineSimProblem_3.m
+Main functions for creating simulated data and formulating an inference problem
+* defineSimProblem_1.m
+* defineSimProblem_2.m
+* defineSimProblem_3.m
 
-* Main function for structure inference with real data
-- main_Th17.m
+Main function for structure inference with real data
+* main_Th17.m
 
 ## Requirements
 
