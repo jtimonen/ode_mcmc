@@ -1,4 +1,4 @@
-# odemcmc
+# ode_mcmc
 
 Implementation of probabilistic ODE model structure inference using MCMC methods
 
