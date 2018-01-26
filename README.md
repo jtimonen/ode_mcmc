@@ -13,6 +13,9 @@ Main functions for running the inference in simulated data cases where the model
 * main_sim_1.m
 * main_sim_23.m
 
+Function for precomputing model probabilities
+* precompute.m
+
 Main functions for creating simulated data and formulating an inference problem
 * defineSimProblem_1.m
 * defineSimProblem_2.m
