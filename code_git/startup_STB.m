@@ -5,9 +5,6 @@ function [] = startup_STB(stb_path)
 % Copyright (c) 2007, The Regents of the University of California.
 % $Revision: 4074 $Date: 2007/08/21 17:43:48 $
 
-% If called without any argument, use the path specified which was
-% harcoded when startup_STB.m was created.
-
 if nargin == 0
   stb_path = '~/Documents/CSB/odemcmc/';
   stb = fullfile(stb_path,'sundialsTB');
