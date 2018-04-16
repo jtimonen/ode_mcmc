@@ -30,3 +30,9 @@ Main function for structure inference with real data
 * Sundials + sundialsTB [https://computation.llnl.gov/projects/sundials]
 
 Tested with Matlab 2016b and sundials 2.4.0 
+
+## References
+
+* J. Timonen, H. Mannerström, H. Lähdesmäki and J. Intosalmi, "A probabilistic framework for molecular network structure inference by means of mechanistic modeling," in IEEE/ACM Transactions on Computational Biology and Bioinformatics.
+doi: 10.1109/TCBB.2018.2825327
+URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8334413&isnumber=4359833
